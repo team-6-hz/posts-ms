@@ -1,0 +1,4 @@
+
+export default function key() {
+    return "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InloZXB3eXZuZWR5cmVmdHZreXJ2Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3MDE0MTM3NTEsImV4cCI6MjAxNjk4OTc1MX0.aun139ITQlhoqTUK0fzIEgaoXtmj9tjFDWONjfB_3ag";
+}
