@@ -31,3 +31,12 @@ export async function insertDataFromJSON(req ) {
         console.error('Error inserting data:', err.message);
     }
 }
+
+export async function getDataAuthor(author) {
+    const { data, error } = await supabase.from('posts').select('*').eq('author', author);
+    if (error) console.log('query error', error);
+    else {
+        console.log(data);
+        return data;
+    }
+}

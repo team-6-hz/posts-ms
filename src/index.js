@@ -7,6 +7,7 @@ import { getPostData } from './controller.js';
 import { postData } from './controller.js';
 import { setupLogging } from './logging.js';
 import { insertDataFromJSON } from './sbadptr.js';
+import { getPostDataAuthor } from './controller.js';
 
 
 const app = express();
@@ -15,6 +16,14 @@ setupLogging(app);
 app.use(express.json()); // Middleware to parse JSON requests
 
 app.get('/getPosts', cors(), getPostData);
+app.get('/getPosts/:author', cors(), getPostDataAuthor);
+// app.get('/getPosts/:author', cors(), async (req, res) => {
+//     try {
+//         res.json(await getDataAuthor(req.params.author));
+//     } catch (error) {
+//         next(err);
+//     }
+// });
 app.post('/post', cors(), async (req, res) => {
     console.log(req.body);
     try {
